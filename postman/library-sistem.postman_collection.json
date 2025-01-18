@@ -1,0 +1,1065 @@
+{
+	"info": {
+		"_postman_id": "46580d6e-f644-4bf8-aedf-0caa00666430",
+		"name": "library-sistem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8276896"
+	},
+	"item": [
+		{
+			"name": "Spring",
+			"item": [
+				{
+					"name": "borrower",
+					"item": [
+						{
+							"name": "add borrower",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"imam\",\r\n    \"email\":\"imam01@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{8080}}/api/borrowers",
+									"host": [
+										"{{8080}}"
+									],
+									"path": [
+										"api",
+										"borrowers"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"imam\",\r\n    \"email\":\"imam01@gmail.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{8080}}/api/borrowers",
+											"host": [
+												"{{8080}}"
+											],
+											"path": [
+												"api",
+												"borrowers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 18 Jan 2025 06:08:45 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"message\": \"Borrower added successfully\",\n    \"status\": \"OK\",\n    \"data\": {\n        \"id\": 10,\n        \"name\": \"imam\",\n        \"email\": \"imam01@gmail.com\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "get all borrowers",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{8080}}/api/borrowers",
+									"host": [
+										"{{8080}}"
+									],
+									"path": [
+										"api",
+										"borrowers"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{8080}}/api/borrowers",
+											"host": [
+												"{{8080}}"
+											],
+											"path": [
+												"api",
+												"borrowers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 18 Jan 2025 06:08:52 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"message\": \"Get all borrowers successfully\",\n    \"status\": \"OK\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Alice Johnson\",\n            \"email\": \"test@gmail.com\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Bob Smith\",\n            \"email\": \"test01@gmail.com\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"bob genit\",\n            \"email\": \"bob@gmail.com\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"bob genit sekali\",\n            \"email\": \"bob21@gmail.com\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"bob genit sekali\",\n            \"email\": \"bob22@gmail.com\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"imam\",\n            \"email\": \"imam@gmail.com\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"imam\",\n            \"email\": \"imam01@gmail.com\"\n        }\n    ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "book",
+					"item": [
+						{
+							"name": "add books",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"book of 2\",\r\n    \"author\":\"aang\",\r\n    \"publishedDate\":\"2024-01-15T14:30:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{8080}}/api/books",
+									"host": [
+										"{{8080}}"
+									],
+									"path": [
+										"api",
+										"books"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\":\"book of 2\",\r\n    \"author\":\"aang\",\r\n    \"publishedDate\":\"2024-01-15T14:30:00\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{8080}}/api/books",
+											"host": [
+												"{{8080}}"
+											],
+											"path": [
+												"api",
+												"books"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 18 Jan 2025 06:08:31 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"message\": \"Book added successfully\",\n    \"status\": \"OK\",\n    \"data\": {\n        \"id\": 18,\n        \"title\": \"book of 2\",\n        \"author\": \"aang\",\n        \"publishedDate\": \"2024-01-15T14:30:00\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "get detail book",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8080}}/api/books/1",
+									"host": [
+										"{{8080}}"
+									],
+									"path": [
+										"api",
+										"books",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{8080}}/api/books/1",
+											"host": [
+												"{{8080}}"
+											],
+											"path": [
+												"api",
+												"books",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 18 Jan 2025 05:21:57 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"title\": \"book 1\",\n    \"author\": \"benelev\",\n    \"publishedDate\": \"2023-09-23T00:00:00\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "borrow history",
+					"item": [
+						{
+							"name": "create borrow",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"bookId\":3,\r\n    \"borrowerId\":1,\r\n    \"borrowDate\":\"2025-01-10T14:30:00\",\r\n    \"dueDate\":\"2025-01-12T14:30:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{8080}}/api/borrow_history",
+									"host": [
+										"{{8080}}"
+									],
+									"path": [
+										"api",
+										"borrow_history"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"bookId\":3,\r\n    \"borrowerId\":1,\r\n    \"borrowDate\":\"2025-01-10T14:30:00\",\r\n    \"dueDate\":\"2025-01-12T14:30:00\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{8080}}/api/borrow_history",
+											"host": [
+												"{{8080}}"
+											],
+											"path": [
+												"api",
+												"borrow_history"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 18 Jan 2025 03:55:37 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"borrower\": {\n        \"id\": 1,\n        \"name\": \"Alice Johnson\",\n        \"email\": \"test@gmail.com\"\n    },\n    \"book\": {\n        \"id\": 3,\n        \"title\": \"Clean Code\",\n        \"author\": \"Robert C. Martin\",\n        \"publishedDate\": \"2001-02-23T00:00:00\"\n    },\n    \"borrowDate\": \"2025-01-18T10:55:37.3477983\",\n    \"returnDate\": null,\n    \"dueDate\": \"2025-01-12T14:30:00\",\n    \"status\": \"on time\"\n}"
+								}
+							]
+						},
+						{
+							"name": "overdue borrow a book",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{8080}}/api/borrow_history/overdue",
+									"host": [
+										"{{8080}}"
+									],
+									"path": [
+										"api",
+										"borrow_history",
+										"overdue"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{8080}}/api/borrow_history/overdue",
+											"host": [
+												"{{8080}}"
+											],
+											"path": [
+												"api",
+												"borrow_history",
+												"overdue"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 18 Jan 2025 05:21:06 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"message\": \"Get overdue books successfully\",\n    \"status\": \"OK\",\n    \"data\": [\n        {\n            \"id\": 3,\n            \"bookId\": 1,\n            \"borrowerId\": 2,\n            \"borrowDate\": \"2024-07-23T00:00\",\n            \"dueDate\": \"2024-07-26T00:00\",\n            \"status\": \"\"\n        },\n        {\n            \"id\": 4,\n            \"bookId\": 2,\n            \"borrowerId\": 2,\n            \"borrowDate\": \"2024-07-23T00:00\",\n            \"dueDate\": \"2024-07-26T00:00\",\n            \"status\": \"\"\n        },\n        {\n            \"id\": 5,\n            \"bookId\": 2,\n            \"borrowerId\": 2,\n            \"borrowDate\": \"2024-07-23T00:00\",\n            \"dueDate\": \"2024-07-26T00:00\",\n            \"status\": \"\"\n        },\n        {\n            \"id\": 6,\n            \"bookId\": 2,\n            \"borrowerId\": 2,\n            \"borrowDate\": \"2024-07-23T00:00\",\n            \"dueDate\": \"2024-07-26T00:00\",\n            \"status\": \"\"\n        },\n        {\n            \"id\": 7,\n            \"bookId\": 2,\n            \"borrowerId\": 2,\n            \"borrowDate\": \"2024-07-23T00:00\",\n            \"dueDate\": \"2024-07-26T00:00\",\n            \"status\": \"\"\n        },\n        {\n            \"id\": 8,\n            \"bookId\": 2,\n            \"borrowerId\": 3,\n            \"borrowDate\": \"2024-07-23T00:00\",\n            \"dueDate\": \"2024-07-26T00:00\",\n            \"status\": \"\"\n        },\n        {\n            \"id\": 9,\n            \"bookId\": 2,\n            \"borrowerId\": 1,\n            \"borrowDate\": \"2024-07-23T00:00\",\n            \"dueDate\": \"2024-07-26T00:00\",\n            \"status\": \"\"\n        },\n        {\n            \"id\": 10,\n            \"bookId\": 2,\n            \"borrowerId\": 1,\n            \"borrowDate\": \"2024-07-23T00:00\",\n            \"dueDate\": \"2024-07-26T00:00\",\n            \"status\": \"\"\n        },\n        {\n            \"id\": 11,\n            \"bookId\": 2,\n            \"borrowerId\": 1,\n            \"borrowDate\": \"2024-07-23T00:00\",\n            \"dueDate\": \"2024-07-26T00:00\",\n            \"status\": \"\"\n        },\n        {\n            \"id\": 12,\n            \"bookId\": 3,\n            \"borrowerId\": 1,\n            \"borrowDate\": \"2024-07-23T00:00\",\n            \"dueDate\": \"2024-07-26T00:00\",\n            \"status\": \"\"\n        },\n        {\n            \"id\": 13,\n            \"bookId\": 3,\n            \"borrowerId\": 1,\n            \"borrowDate\": \"2024-07-23T00:00\",\n            \"dueDate\": \"2024-07-26T00:00\",\n            \"status\": \"\"\n        },\n        {\n            \"id\": 14,\n            \"bookId\": 3,\n            \"borrowerId\": 1,\n            \"borrowDate\": \"2024-07-23T00:00\",\n            \"dueDate\": \"2024-07-26T00:00\",\n            \"status\": \"\"\n        },\n        {\n            \"id\": 15,\n            \"bookId\": 3,\n            \"borrowerId\": 1,\n            \"borrowDate\": \"2024-07-23T00:00\",\n            \"dueDate\": \"2024-07-26T00:00\",\n            \"status\": \"\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "return book",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"returnDate\": \"2026-01-18T12:00:00\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{8080}}/api/borrow_history/:idHistory/return",
+									"host": [
+										"{{8080}}"
+									],
+									"path": [
+										"api",
+										"borrow_history",
+										":idHistory",
+										"return"
+									],
+									"variable": [
+										{
+											"key": "idHistory",
+											"value": "14"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"returnDate\": \"2024-01-18T12:00:00\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{8080}}/api/borrow_history/:idHistory/return",
+											"host": [
+												"{{8080}}"
+											],
+											"path": [
+												"api",
+												"borrow_history",
+												":idHistory",
+												"return"
+											],
+											"variable": [
+												{
+													"key": "idHistory",
+													"value": "15"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 18 Jan 2025 06:01:42 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"message\": \"Book return date updated successfully\",\n    \"status\": \"OK\",\n    \"data\": {\n        \"id\": 1,\n        \"borrower\": {\n            \"id\": 1,\n            \"name\": \"Alice Johnson\",\n            \"email\": \"test@gmail.com\"\n        },\n        \"book\": {\n            \"id\": 1,\n            \"title\": \"book 1\",\n            \"author\": \"benelev\",\n            \"publishedDate\": \"2023-09-23T00:00:00\"\n        },\n        \"borrowDate\": \"2025-01-01T00:00:00\",\n        \"returnDate\": \"2024-01-18T12:00:00\",\n        \"dueDate\": \"2025-01-10T00:00:00\",\n        \"status\": \"on time\"\n    }\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "golang",
+			"item": [
+				{
+					"name": "input books",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzM3MjMzNzk3fQ.YPNf4E4ZcrVgosur7WkHUq23UJj84cYa-dMiaq0EIaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"book 3\",\r\n    \"author\":\"ben\",\r\n    \"publishedDate\":\"23 september 1999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{8080}}/books",
+							"host": [
+								"{{8080}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"book 1\",\r\n    \"author\":\"benelev\",\r\n    \"publishedDate\":\"23 september 2023\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{8080}}/books",
+									"host": [
+										"{{8080}}"
+									],
+									"path": [
+										"books"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 15 Jan 2025 05:11:08 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "81"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"ID\":1,\"Title\":\"book 1\",\"Author\":\"benelev\",\"PublishedDate\":\"23 september 2023\"}\n"
+						}
+					]
+				},
+				{
+					"name": "input borrowers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzM3MjMzNzk3fQ.YPNf4E4ZcrVgosur7WkHUq23UJj84cYa-dMiaq0EIaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"bob genit sekali\",\r\n    \"email\":\"bob22@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{8080}}/borrowers",
+							"host": [
+								"{{8080}}"
+							],
+							"path": [
+								"borrowers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"bob\",\r\n    \"email\":\"bob@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{8080}}/borrowers",
+									"host": [
+										"{{8080}}"
+									],
+									"path": [
+										"borrowers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 15 Jan 2025 05:12:57 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "46"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"ID\":1,\"Name\":\"bob\",\"Email\":\"bob@gmail.com\"}\n"
+						}
+					]
+				},
+				{
+					"name": "input history borrower(pinjam buku)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzM3MjMzNzk3fQ.YPNf4E4ZcrVgosur7WkHUq23UJj84cYa-dMiaq0EIaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookId\":3,\r\n    \"borrowerId\":1,\r\n    \"borrowDate\":\"2024-07-22 22:34:01\",\r\n    \"nextReturnDate\":\"2024-07-25 22:34:01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{8080}}/borrow_history",
+							"host": [
+								"{{8080}}"
+							],
+							"path": [
+								"borrow_history"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"bookId\":1,\r\n    \"borrowerId\":1,\r\n    \"borrowDate\":\"15-01-2025\",\r\n    \"nextReturnDate\":\"18-01-2025\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{8080}}/history",
+									"host": [
+										"{{8080}}"
+									],
+									"path": [
+										"history"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 15 Jan 2025 05:16:43 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "119"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"ID\":1,\"BookID\":1,\"BorrowerID\":1,\"BorrowDate\":\"15-01-2025\",\"ReturnDate\":\"\",\"NextReturnDate\":\"18-01-2025\",\"Status\":\"\"}\n"
+						}
+					]
+				},
+				{
+					"name": "get history library (list data di admin)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzM3MjMzNzk3fQ.YPNf4E4ZcrVgosur7WkHUq23UJj84cYa-dMiaq0EIaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{8080}}/borrow_history?page=1&pageSize=10",
+							"host": [
+								"{{8080}}"
+							],
+							"path": [
+								"borrow_history"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update return date (pengembalian buku)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzM3MjMzNzk3fQ.YPNf4E4ZcrVgosur7WkHUq23UJj84cYa-dMiaq0EIaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2,\r\n    \"return_date\":\"2026-01-09 22:34:01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{8080}}/borrow_history/return",
+							"host": [
+								"{{8080}}"
+							],
+							"path": [
+								"borrow_history",
+								"return"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get overdue book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzM3MjMzNzk3fQ.YPNf4E4ZcrVgosur7WkHUq23UJj84cYa-dMiaq0EIaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{8080}}/borrow_history/overdue?page=1&pageSize=20",
+							"host": [
+								"{{8080}}"
+							],
+							"path": [
+								"borrow_history",
+								"overdue"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "20"
+								}
+							]
+						},
+						"description": "this api is for get which book not returned despite due date limit"
+					},
+					"response": []
+				},
+				{
+					"name": "get most borrowed books",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzM3MjMzNzk3fQ.YPNf4E4ZcrVgosur7WkHUq23UJj84cYa-dMiaq0EIaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{8080}}/borrow_history/most_borrowed",
+							"host": [
+								"{{8080}}"
+							],
+							"path": [
+								"borrow_history",
+								"most_borrowed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get token ",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{8080}}/token?email=test@gmail.com",
+							"host": [
+								"{{8080}}"
+							],
+							"path": [
+								"token"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "test@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
